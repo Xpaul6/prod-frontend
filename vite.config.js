@@ -28,5 +28,5 @@ const vitePWA = VitePWA({
 })
 
 export default defineConfig({
-  plugins: [react(), VitePWA()],
+  plugins: [react()],
 })
