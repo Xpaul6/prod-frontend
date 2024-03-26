@@ -21,15 +21,21 @@ function Habits({data, callRender, currentDate, onCompletion}) {
       <h2 className={styles.title}>Мои привычки</h2>
       <h3 className={styles.listtitle}>Сегодня</h3>
       <ul className={styles.list}>
-        {data && data.habits.map(x => x.period == 'daily' ? <li key={x.id}><HabitCard data={x} currentDate={currentDate} callRender={() => callRender()} onCompletion={() => onCompletion()}/></li> : null)}
+        {data && data.habits.map(x => x.period == 'daily' ? 
+          <li key={x.id}><HabitCard data={x} currentDate={currentDate} callRender={() => callRender()} onCompletion={() => onCompletion()}/></li> 
+          : null)}
       </ul>
       <h3 className={styles.listtitle}>Эта неделя</h3>
       <ul className={styles.list}>
-        {data && data.habits.map(x => x.period == 'weekly' ? <li key={x.id}><HabitCard data={x} currentDate={currentDate} callRender={() => callRender()} onCompletion={() => onCompletion()}/></li> : null)}
+        {data && data.habits.map(x => x.period == 'weekly' ? 
+        <li key={x.id}><HabitCard data={x} currentDate={currentDate} callRender={() => callRender()} onCompletion={() => onCompletion()}/></li> 
+        : null)}
       </ul>
       <h3 className={styles.listtitle}>Этот месяц</h3>
       <ul className={styles.list}>
-      {data && data.habits.map(x => x.period == 'monthly' ? <li key={x.id}><HabitCard data={x} currentDate={currentDate} callRender={() => callRender()} onCompletion={() => onCompletion()}/></li> : null)}
+      {data && data.habits.map(x => x.period == 'monthly' ? 
+      <li key={x.id}><HabitCard data={x} currentDate={currentDate} callRender={() => callRender()} onCompletion={() => onCompletion()}/></li> 
+      : null)}
       </ul>
     </div>
     <div className={styles.btnblock}>

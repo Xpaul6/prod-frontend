@@ -76,7 +76,9 @@ function NewHabit({ callRender, currentDate }) {
         <label>Количество (опционально)</label>
         <input type="text" onChange={(e) => setValue(e.target.value)} value={value} placeholder='Количество'/>
       </form>
-      {description && category && period ? <Link onClick={addHabit} to={'/'} className={styles.submitbtn}>{`${status == 'new' ? 'Add' : 'Edit'} habit`}</Link> : null}
+      {description && category && period ? 
+        <Link onClick={addHabit} to={'/'} className={styles.submitbtn}>{`${status == 'new' ? 'Add' : 'Edit'} habit`}</Link> 
+        : null}
     </div>
     </>
   )

@@ -8,7 +8,6 @@ import completeIcon from '../assets/basic-tick.png'
 
 function HabitCard({data, callRender, currentDate, onCompletion}) {
   const [isCompleted, setIsCompleted] = useState(data.isCompleted ? true : false)
-  const [showDeleteOptions, setShowDeleteoptions] = useState(false) // может быть верну 2 способа удаления
 
   let deadline
   let deadlineDate
@@ -45,21 +44,6 @@ function HabitCard({data, callRender, currentDate, onCompletion}) {
     localStorage.setItem('status', 'edit')
     localStorage.setItem('template', JSON.stringify(data))
   }
-
-  // function handleDelete() {
-  //   setShowDeleteoptions(prev => !prev)
-  // }
-
-  // function handleSimpleDelete() {
-  //   let currentData = JSON.parse(localStorage.getItem('data'))
-  //   for (let i in currentData.habits) {
-  //     if (currentData.habits[i].id == data.id) {
-  //       currentData.habits.splice(i, 1)
-  //       break
-  //     }
-  //   }
-  //   localStorage.setItem('data', JSON.stringify(currentData))
-  // }
 
   function handleHardDelete() { 
     let currentData = JSON.parse(localStorage.getItem('data'))
@@ -103,13 +87,6 @@ function HabitCard({data, callRender, currentDate, onCompletion}) {
           <div className={styles.deadline}>{deadline}</div>
         </div>
       </div>
-      {showDeleteOptions &&
-        <div className={styles.deleteblock}>
-          <button onClick={handleSimpleDelete}>Delete</button>
-          <button onClick={handleHardDelete}>Delete history</button>
-        </div>
-      } 
-      {!showDeleteOptions &&
         <div className={styles.inputbox}>
           {!isCompleted && 
           <>
@@ -128,7 +105,6 @@ function HabitCard({data, callRender, currentDate, onCompletion}) {
           <div>Готово</div>
           }
       </div>
-      }
     </div>
   )
 }

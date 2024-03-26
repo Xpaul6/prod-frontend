@@ -14,7 +14,9 @@ function Profile({ stats }) {
 
   function calcLevel() {
     setLevel(Math.ceil(levelPoints / 100) + 1)
-    setLevelProgress(levelPoints % 100 == 0 ? levelPoints - (Math.ceil(levelPoints / 100) * 100) : levelPoints - ((Math.ceil(levelPoints / 100) - 1) * 100))
+    setLevelProgress(levelPoints % 100 == 0 ? 
+      levelPoints - (Math.ceil(levelPoints / 100) * 100) 
+      : levelPoints - ((Math.ceil(levelPoints / 100) - 1) * 100))
   }
 
   useEffect(calcLevel, [])
