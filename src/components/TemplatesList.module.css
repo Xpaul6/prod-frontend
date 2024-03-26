@@ -1,0 +1,79 @@
+/* ----- Desktop ------ */
+@media (min-width: 1200px) {
+  .templateslist > * {
+    margin-inline: 40px;
+  }
+  .icon {
+    height: 50px;
+  }
+  .btn {
+    margin-right: 20px;
+  }
+}
+
+/* ----- Mobile ------ */
+@media (max-width: 1200px) {
+  .templateslist > * {
+    margin-inline: 20px;
+  }
+  .icon {
+    height: 30px;
+  }
+  .btn {
+    margin-right: 10px;
+  }
+}
+
+.templateslist {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 30px;
+  text-align: center;
+  color: var(--color-text);
+}
+
+.list {
+  list-style: disc;
+  padding: 0;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: var(--color-lightened);
+  margin-block: 10px;
+  border-radius: 10px;
+}
+
+.section {
+  font-size: 20px;
+  color: var(--color-bg);
+}
+
+.backbtn {
+  align-self: flex-end;
+  padding: 10px;
+  font-size: 20px;
+  border: 2px solid var(--color-primary);
+  border-radius: 10px;
+  background-color: var(--color-bg);
+  text-decoration: none;
+  color: var(--color-text);
+  cursor: pointer;
+  transition: all .15s ease;
+}
+
+.backbtn:hover {
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+  box-shadow: 0px 0px 5px 2px #999999;;
+}
+
+.backbtn:active {
+  opacity: .2;
+}

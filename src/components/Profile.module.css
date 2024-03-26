@@ -1,0 +1,144 @@
+/* ----- Desktop ------ */
+@media (min-width: 1200px) {
+  .profile > * {
+    margin-inline: 40px;
+  }
+  .pfp {
+    width: 100px;
+    margin-block: 40px;
+  }
+}
+
+/* ------ Mobile ------ */
+@media (max-width: 1200px) {
+  .profile > * {
+    margin-inline: 20px;
+  }
+  .pfp {
+    width: 70px;
+    margin-block: 20px;
+  }
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+}
+
+.pfp {
+  align-self: center;
+}
+
+.card {
+  background-color: var(--color-lightened);
+  color: var(--color-bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  margin-block: 10px;
+  padding-bottom: 20px;
+}
+
+.cardtitle {
+  margin-block: 15px;
+  font-size: 25px;
+}
+
+.progressbar {
+  position: relative;
+  display: flex;
+  width: 75%;
+  height: 30px;
+  background-color: var(--color-bg);
+  border-radius: 10px;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.progressbarfiller {
+  align-self: flex-start;
+  background-color: var(--color-lightened);
+  opacity: .5;
+  height: 100%;
+  width: 60%;
+  padding: 0;
+  margin: 0;
+}
+
+.progressbar span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--color-text);
+}
+
+.statlist {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.statitem {
+  width: 100px;
+  min-height: 180px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  flex-basis: 110px;
+}
+
+.statitem h4 {
+  margin: 0;
+  text-align: center;
+}
+
+.circle {
+  position: relative;
+  width: 100%;
+}
+
+.circle span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.storemenu {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.balance {
+  display: flex;
+  align-items: center;
+}
+
+.balance img{
+  height: 20px;
+}
+
+.balance span {
+  font-weight: bold;
+}
+
+.storebtn {
+  text-decoration: none;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  padding: 10px;
+  border-radius: 10px;
+}

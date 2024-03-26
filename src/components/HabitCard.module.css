@@ -1,0 +1,118 @@
+/* ----- Desktop ------ */
+@media (min-width: 1200px) {
+  .btn {
+    flex-direction: row;
+  }
+  .btn img {
+    height: 35px;
+  }
+  .inputbox {
+    flex-direction: row;
+  }
+  .infobox {
+    width: 50%;
+  }
+  .deleteblock {
+    flex-direction: row;
+    margin-right: 10px;
+  }
+}
+
+/* ----- Mobile ------ */
+@media (max-width: 1200px) {
+  .btn {
+    flex-direction: row-reverse;
+  }
+  .btn img {
+    height: 25px;
+    margin-block: 5px;
+  }
+  .inputbox {
+    flex-direction: column;
+  }
+  .infobox {
+    width: 75%;
+  }
+  .deleteblock {
+    flex-direction: column;
+  }
+}
+
+.card {
+  background-color: var(--color-lightened);
+  color: var(--color-bg);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  margin-block: 10px;
+}
+
+.infobox {
+  display: flex;
+  flex-direction: column;
+}
+
+.description {
+  font-size: 25px;
+  padding-block: 5px;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0px 5px 5px 0px;
+}
+
+.deadline {
+  color: rgb(200, 50, 50);
+}
+
+.inputbox {
+  display: flex;
+  justify-content: space-between;
+  min-width: 25%;
+  max-width: 50%;
+  margin-right: 15px;
+}
+
+.inputbox > * {
+  font-size: 25px;
+}
+
+.btn {
+  border: none;
+  background-color: transparent;
+  display: flex;
+  cursor: pointer;
+  height: 100%;
+  padding: 0;
+}
+
+.completed {
+  opacity: .5;
+}
+
+.deleteblock {
+  position: relative;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid var(--color-primary);
+  border-radius: 10px;
+  background-color: var(--color-bg);
+  max-height: 50%;
+}
+
+.deleteblock button {
+  font-size: 15px;
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+  border: 2px solid transparent;
+  border-radius: 10px;
+  margin: 1px;
+  cursor: pointer;
+}
